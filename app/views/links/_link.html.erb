@@ -18,7 +18,7 @@
     <% end %>
 
     <%= tag.div class: "text-center text-xs" do %>
-      <%= link_to "Copy", link, class: "px-3 py-1.5 rounded bg-gray-100 no-underline" %>
+      <%= button_tag "Copy", class: "px-3 py-1.5 rounded bg-gray-100 no-underline font-medium", data: { controller: "clipboard", clipboard_text: view_url(link) } %>
     <% end %>
   <% end %>
 <% end %>
