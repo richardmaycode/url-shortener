@@ -2,6 +2,6 @@
 
 <%= render partial: "form", locals: { link: @link } %>
 
-<%= tag.div class: "mt-8 flex flex-col divide-y divide-gray-100" do %>
+<%= tag.div id: "links", class: "mt-8 flex flex-col divide-y divide-gray-100" do %>
   <%= render @links %>
 <% end %>
