@@ -76,3 +76,5 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem "sucker_punch", "~> 3.1"
