@@ -78,3 +78,5 @@ group :test do
 end
 
 gem "sucker_punch", "~> 3.1"
+
+gem "devise", "~> 4.9"
