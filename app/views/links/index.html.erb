@@ -3,4 +3,9 @@
 
 <%= tag.div id: "links", class: "mt-8 flex flex-col divide-y divide-gray-100" do %>
   <%= render @links %>
+
+  <%= tag.div class: "pt-8 mb-16 text-center" do %>
+    <%== pagy_nav @pagy %>
+  <% end unless @pagy.pages == 1 %>
 <% end %>
+

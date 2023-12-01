@@ -2,8 +2,10 @@ class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
   before_action :check_if_editable, only: [:edit, :udpate, :destroy]
   def index
-    @links = Link.recent_first
+    @pagy, @links = pagy Link.recent_first
     @link ||= Link.new
+  rescue Pagy::OverflowError
+    redirect_to root_path
   end
 
   def show; end
